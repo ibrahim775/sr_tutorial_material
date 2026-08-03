@@ -1,0 +1,29 @@
+{
+  "what": "Unconstrained PySR front for y = 2 exp(-x/3) cos(2.5 x) + N(0, 0.05).",
+  "why_precomputed": "The junk on this front is stochastic and the run costs about 21 s. Fixed here so the notebook's before/after is exact.",
+  "pysr_settings": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "unary_operators": [
+      "sin",
+      "cos",
+      "exp"
+    ],
+    "maxsize": 30,
+    "niterations": 100
+  },
+  "reproducibility": {
+    "deterministic": true,
+    "parallelism": "serial",
+    "random_state": 3,
+    "numpy_seed": 0
+  },
+  "n_rows": 20,
+  "n_rows_with_nested_trig": 7,
+  "best_loss": 0.0024221707,
+  "wall_seconds": 20.8
+}

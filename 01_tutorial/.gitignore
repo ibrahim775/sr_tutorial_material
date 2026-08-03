@@ -1,0 +1,9 @@
+# PySR writes a run directory per fit, SymTorch writes its own alongside.
+outputs/
+symtorch_runs/
+SR_output/
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
