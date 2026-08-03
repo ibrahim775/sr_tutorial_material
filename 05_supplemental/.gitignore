@@ -1,0 +1,7 @@
+outputs/
+SR_output/
+csv_only_copy/
+__pycache__/
+.ipynb_checkpoints/
+*.bkup
+.DS_Store

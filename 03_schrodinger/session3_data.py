@@ -338,7 +338,7 @@ def plot_potential(potential=harmonic, levels=HARMONIC_LEVELS, lo=-4.0, hi=4.0):
                 color=INK, fontsize=10.5)
     ax.set_ylim(-0.35, max(levels) + 1.15)
     ax.set_xlim(lo, hi)
-    _finish(ax, "The well, and the answers we are trying not to look up",
+    _finish(ax, "The harmonic oscillator and levels",
             "x", "energy")
     plt.show()
 

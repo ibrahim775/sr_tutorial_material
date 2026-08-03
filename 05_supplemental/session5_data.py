@@ -151,6 +151,17 @@ def plot_check(X, y, prediction, label="found equation", ylabel="concentration  
     plt.show()
 
 
+def cheapest_within(model, factor: float = 2.0, index=None):
+    """The simplest row that gets within `factor` of that search's own best loss.
+
+    Comparing the bottom rows of two fronts compares two piles of decoration; this
+    asks the fairer question of what each search had to spend to be as good as it got.
+    """
+    table = model.equations_ if index is None else model.equations_[index]
+    good = table[table["loss"] <= factor * table["loss"].min()]
+    return good.loc[good["complexity"].idxmin()]
+
+
 def front(model, index=None):
     """The three columns worth looking at, for printing."""
     table = model.equations_ if index is None else model.equations_[index]
